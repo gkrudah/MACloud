@@ -1,10 +1,14 @@
 package com.hanyang.mc;
 
+import com.hanyang.mc.util.FileListGetter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.io.File;
+import java.util.List;
 
 @SpringBootApplication
 public class Main implements CommandLineRunner {
@@ -16,7 +20,13 @@ public class Main implements CommandLineRunner {
 
 	@Override
 	public void run(String...args) {
-			logger.info("Hello spring");
+
+		if(args.length == 0) {
+			System.out.println("Usage : macloud {file | directory}*");
 			System.exit(0);
+		}
+		List<File> files = FileListGetter.get(args);
+
+		System.exit(0);
 	}
 }
