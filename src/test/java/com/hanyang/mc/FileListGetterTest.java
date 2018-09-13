@@ -2,13 +2,16 @@ package com.hanyang.mc;
 
 import com.hanyang.mc.util.FileListGetter;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.List;
 
 public class FileListGetterTest {
 
-	private final String path = "D:\\Pictures\\카메라";
+	private final static Logger logger = LoggerFactory.getLogger(FileListGetterTest.class);
+	private final String path = "/home/lee/Pictures";
 
 	@Test
 	public void test() {
