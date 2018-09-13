@@ -23,6 +23,7 @@ mv node_modules github-uploader-binary/
 
 if [ -x "$(command -v mvn)" ]; then
 	mvn clean package -Dmaven.test.skip=true
+	mv ./target/MACloud-0.1-spring-boot.jar ./
 	exit 0
 fi
 
@@ -37,3 +38,5 @@ elif 	[ "${machine}" == "Windows" ]
 then 	
 	./mvnw.cmd clean package -Dmaven.test.skip=true
 fi
+
+mv ./target/MACloud-0.1-spring-boot.jar MACloud.jar
