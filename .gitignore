@@ -5,3 +5,6 @@
 target/
 
 *.iml
+
+#github-uploader
+github-uploader-binary/
