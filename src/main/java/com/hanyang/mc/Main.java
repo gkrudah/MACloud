@@ -22,9 +22,24 @@ public class Main implements CommandLineRunner {
 	public void run(String...args) {
 
 		if(args.length == 0) {
-			System.out.println("Usage : macloud {file | directory}*");
+			System.out.println("Usage : macloud (down | up) {file | directory}*");
 			System.exit(0);
+		} else if(args.length == 1) {
+			System.out.println("Usage : macloud (down | up) {file | directory}*");
+			System.exit(0);
+		} else {
+			if(args[1].compareToIgnoreCase("down") == 0) {
+				/* downloads */
+
+			} else if(args[1].compareToIgnoreCase("up") == 0) {
+				/* uploads */
+
+			} else {
+				System.out.println("Usage : macloud (down | up) {file | directory}*");
+				System.exit(0);
+			}
 		}
+
 		List<File> files = FileListGetter.get(args);
 
 		System.exit(0);
