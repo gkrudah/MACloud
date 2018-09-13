@@ -15,9 +15,6 @@ public class FileListCompactor {
 	 */
 
 	public static List<File> compactFileList(List<File> files, File properties) {
-
-
 		return Collections.emptyList();
-
 	}
 }
